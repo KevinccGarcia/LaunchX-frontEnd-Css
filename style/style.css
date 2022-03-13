@@ -1,10 +1,19 @@
+body {
+    margin: 0;
+}
+/* NAV */
 .container{
     width: 100%;
     margin: 0 auto;
 }
 
 header{
-    background-color: aliceblue;
+    position: absolute;
+    background-color: rgba(255,255,255,0.9);
+    backdrop-filter: blur(15px);
+    top: 0;
+    left: 0;
+    right: 0;
 }
 
 header::after{
@@ -24,13 +33,110 @@ nav{
 
 nav ul{
     margin: 0;
-    padding: 0;
+    padding: 1rem 5rem 2rem ;
     list-style: none;
 }
 
 nav li{
+    font-family: 'Fredoka', sans-serif;
+    font-size: 1.7rem;
     display: inline-block;
     margin-left: 10px;
     padding-top: 10px;
-    margin-right: 20px;
+    margin-right: 30px;
+    margin-bottom: 10px;
+}
+
+
+li a {
+    transition: color, box-shadow 0.3s ease;
+}
+
+li a:link {
+    text-decoration: none;
+    color: #6D7B93;
+}
+
+li a:visited {
+    color: #6D7B93;
+}
+
+li a:hover {
+
+    text-decoration: none;
+    color: #103e8f;
+    box-shadow:  0px 2px 0px 0px #5175b3;
+}
+
+li a:active {
+    text-decoration: none;
+    color: #0a347c;
+}
+
+li a.hoax {
+    transition: all 0.4s ease;
+}
+
+li a.hoax:link, li a.hoax:visited {
+    text-align: center;
+    background-color: #2848C6;
+    color: white;
+    padding: 11px 8px;
+    text-decoration: none;
+    display: inline-block;
+    border: #2848C6 solid;
+    border-radius: 3px;
+    box-shadow: 0 6px 10px -4px #3a3a3a;
+}
+
+li a.hoax:hover, li a.hoax.active {
+    background-color: #0b2177;
+    border: #0b2177 solid;
+}
+
+.article {
+    font-family: 'Signika', sans-serif;
+    font-weight: bold;
+    color: #3757D5;
+    font-size: 3rem;
+    display: inline-block;
+    margin: 2rem 0 0 16rem;
+}
+
+/* Primer body */
+
+.nurse {
+float: right;
+}
+
+div img {
+    width: 55rem;
+    height: 63rem;
+}
+
+.lucha {
+    float: left;
+
+    margin-top: 169px;
+    margin-left: 251px;
+    width: 594px;
+}
+
+h1 {
+    font-family: 'Signika';
+    color: #1F3E72;
+    font-weight: bold;
+    font-size: 4rem;
+}
+
+.detener {
+    font-family: 'Fredoka';
+    color: #6D7B93;
+    font-weight: bold;
+    font-size: 1.7rem;
+    margin-top: .5rem;
+}
+
+.no-se {
+    list-style: none;
 }
