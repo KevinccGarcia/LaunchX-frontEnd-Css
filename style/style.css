@@ -1,5 +1,6 @@
 body {
     margin: 0;
+    font-family: 'Fredoka, sans-serif';
 }
 /* NAV */
 .container{
@@ -372,14 +373,22 @@ h1 {
     font-weight: bold;
     text-align: justify;
     margin: 40px 30px;
+    font-size: 1.3rem;
 }
+
+.section2 div{
+    border: 1px rgb(197, 197, 197) solid;
+}
+
+/* This should've been implemented on a global div selector
+Too bad!*/
 .min {
     background-color: rgba(255, 255, 255, 0.8);
     backdrop-filter: blur(6px);
     width: 360px;
     height: 400px;
     margin: auto 10px;
-    box-shadow: 0px 0px 16px -5px #1f1f1f;
+    /* box-shadow: 0px 0px 16px -5px #1f1f1f; */
     border-radius: 18px;
 }
 
@@ -398,7 +407,7 @@ h1 {
     width: 360px;
     height: 400px;
     margin: auto 10px;
-    box-shadow: 0px 0px 16px -5px #1f1f1f;
+    /* box-shadow: 0px 0px 16px -5px #1f1f1f; */
     border-radius: 18px;
 }
 .creating {
@@ -407,7 +416,7 @@ h1 {
     width: 360px;
     height: 400px;
     margin: auto 10px;
-    box-shadow: 0px 0px 16px -5px #1f1f1f;
+    /* box-shadow: 0px 0px 16px -5px #1f1f1f; */
     border-radius: 18px;
 }
 
@@ -461,4 +470,88 @@ h1 {
     padding: 12px 12px;
     text-shadow: none;
     box-shadow: 0px 2px 4px 0px #1f1f1f;
+}
+
+/* Preparaciones */
+
+.section3 {
+    display: flex;
+    /* background-color: #b6c7e5; */
+    height: 1000px;
+    position: relative;
+    margin-top: 152px;
+}
+
+.antesde {
+    /* background-color: #d6b79e; */
+    position: absolute;
+    right: 269px;
+    top: 0px;
+    width: 685px;
+    height: 300px;
+}
+
+.antesde h3 {
+    font-family: 'Fredoka, sans-serif';
+    font-size: 2.9rem;
+    font-weight: bold;
+    color: #1f3e72;
+}
+
+.accordion {
+    width: 650px;
+    position: absolute;
+    right: 325px;
+    bottom: 426px;
+
+}
+
+.accordion .contentBx {
+    position: relative;
+    margin: 10px 20px;
+}
+
+.accordion .contentBx .label {
+    position: relative;
+    padding: 10px;
+    background: rgba(241, 245, 255, 0.8);
+    color: #103e8f;
+    border-radius: 6px;
+    box-shadow: 0px 6px 4px #707070;
+    cursor: pointer;
+}
+
+.accordion .contentBx .label::before {
+    content: '+';
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    font-size: 2rem;
+}
+
+.accordion .contentBx .content {
+    position: relative;
+    /* padding: 10px; */
+    background: #fff;
+    height: 0;
+    overflow: hidden;
+    transition: ease 0.5s;
+    overflow-y: auto;
+}
+
+.accordion .contentBx.active .content {
+    height: 150px;
+    box-shadow: none;
+}
+
+.accordion .contentBx.active .label {
+    box-shadow: none;
+}
+
+article {
+    font-family: 'Fredoka, sans-serif';
+    font-size: 6rem;
+    text-align: center;
+    color: red;
 }
